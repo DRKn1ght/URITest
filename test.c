@@ -1,5 +1,5 @@
 #include <stdio.h>
 int main(){
-    printf("testea");
+    printf("a");
     return 0;
 }
