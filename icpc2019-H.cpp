@@ -1,13 +1,19 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-int V, N, VN;
+long long int V, N, VN;
 int main()
 {
-    cin >> V >> N;
+    cin >> V;
+    cin >> N;
     VN = V*N;
     for (int i = 10; i <= 90; i+=10)
     {
-        cout << ceil((float)(VN*i)/100) << " ";
+        if (i < 90)
+        {
+            cout << int(ceil((float)(VN*i)/100)) << " ";
+        }else{
+            cout << int(ceil((float)(VN*i)/100)) << endl;
+        }
     }
 }
