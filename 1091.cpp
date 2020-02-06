@@ -28,27 +28,23 @@ void direcao(int N, int M, int X, int Y){
 }
 int main()
 {
-    int i = 0, input, kaux, N, M, K; //Variáveis
-    vector<int> X, Y; //Vetor X e Y de cada casa
+    int N, M, K, X, Y; //Variáveis;
     while (true)
     {
         cin >> K; //Pega o valor de K (primeira linha)
-        kaux = K; //K Auxiliar
         if(K == 0){ //Se K = 0, lista o vetor com as respostas e fecha o programa
             for(auto v = dir.begin(); v != dir.end(); v++)
                 cout << *v << endl;
-            cout << endl;
             break;
         }
         cin >> N; //Pega o valor de N
-        cin >> M; //Pega o valor de K
-        while (kaux != 0) //Executa o numero de vezes o K
+        cin >> M; //Pega o valor de M
+        while (K != 0) //Executa o numero de vezes o K
         {
-            cin >> input; X.push_back(input);
-            cin >> input; Y.push_back(input);
-            direcao(N, M, X[i], Y[i]); //Envia para a função as informações para salvar no vetor dir as respostas
-            i++;
-            kaux--;
+            cin >> X;
+            cin >> Y;
+            direcao(N, M, X, Y); //Envia para a função as informações para salvar no vetor dir as respostas
+            K--;
         }
     }
 }
